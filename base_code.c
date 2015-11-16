@@ -1,3 +1,5 @@
+//Base code for moving forward and turning
+
 #pragma config(StandardModel, "RVW CLAWBOT")
 
 const float NORMAL_SPEED=63;
