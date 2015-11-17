@@ -80,7 +80,7 @@ task main()
 	doNothing(1000);
 	forward(2.5*12/WHEEL_CIRCUM);
 	doNothing(1000);
-	turnRight(0.8);
+	turnRight(0.9);
 	doNothing(1000);
 	forward(1.5*12/WHEEL_CIRCUM);
 	doNothing(1000);
