@@ -7,12 +7,17 @@ const float SLOW_SPEED=40;
 const float ROTATIONS_TO_TICKS=627.2;
 const int AXLE_LENGTH=11;
 const int WHEEL_DIAMETER=4;
+const float WHEEL_CIRCUM=WHEEL_DIAMETER*PI;
 
 void resetEncoders();
 void doNothing(int ms);
 void forward(float rotations);
 void turnLeft(float rotations);
 void turnRight(float rotations);
+void closeClaw(); //arm and claw for my robot don't have encoders, so we need to use time here
+void openClaw();
+void moveArmUp(float time); 
+void moveArmDown(float time);
 
 void resetEncoders()
 {
@@ -72,6 +77,31 @@ void turnRight(float rotations)
 		motor[rightMotor]=-NORMAL_SPEED;
 	}
 	doNothing(0);
+}
+
+void closeClaw()
+{
+		motor[clawMotor] = -20;
+   	wait1Msec(1400);
+   	doNothing(0);
+}
+void openClaw()
+{
+	  motor[clawMotor]=20;
+	  wait1Msec(1400);
+	  doNothing(0);
+}
+
+void moveArmUp(float time)
+{
+	motor[armMotor]=40;
+	wait1Msec(time);
+}
+
+void moveArmDown(float time)
+{
+		motor[armMotor]=-40;
+		wait1Msec(time);
 }
 
 task main()
