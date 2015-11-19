@@ -24,6 +24,7 @@ void doNothing(int ms)
 {
 	motor[leftMotor]=0;
 	motor[rightMotor]=0;
+	motor[clawMotor]=0;
 	wait1Msec(ms);
 }
 
