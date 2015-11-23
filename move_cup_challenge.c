@@ -117,7 +117,7 @@ void moveArmDown(float time)
 
 task main()
 {
-	//ALWAYS START CHALLENGE WITH CLAW OPEN!!!
+        //ALWAYS START CHALLENGE WITH CLAW OPEN!!!
 	forward(2*12/WHEEL_CIRCUM);
 	doNothing(1000);
 	turnLeft(0.8);
@@ -128,11 +128,10 @@ task main()
 	doNothing(1000);
 	forward(1.3*12/WHEEL_CIRCUM);
 	closeClaw();
-	//moveArmUp();
 	doNothing(1000);
 	turnLeft(1.6);
 	doNothing(1000);
 	forward(3.5*12/WHEEL_CIRCUM);
 	doNothing(1000);
-	turnRight(0.8);	
+	turnRight(0.8);
 }
