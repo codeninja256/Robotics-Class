@@ -131,7 +131,7 @@ task main()
 	doNothing(1000);
 	turnLeft(1.6);
 	doNothing(1000);
-	forward(3.5*12/WHEEL_CIRCUM);
+	forward(3*12/WHEEL_CIRCUM);
 	doNothing(1000);
 	turnRight(0.8);
 }
