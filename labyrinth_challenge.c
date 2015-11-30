@@ -1,4 +1,17 @@
-#pragma config(StandardModel, "RVW CLAWBOT")
+#pragma config(I2C_Usage, I2C1, i2cSensors)
+#pragma config(Sensor, in1,    leftLineFollower, sensorLineFollower)
+#pragma config(Sensor, in2,    centerLineFollower, sensorLineFollower)
+#pragma config(Sensor, in3,    rightLineFollower, sensorLineFollower)
+#pragma config(Sensor, in6,    gyro,           sensorGyro)
+#pragma config(Sensor, dgtl1,  rightEncoder,   sensorQuadEncoder)
+#pragma config(Sensor, dgtl3,  leftEncoder,    sensorQuadEncoder)
+#pragma config(Sensor, dgtl6,  touchSensor,    sensorTouch)
+#pragma config(Sensor, dgtl8,  sonarSensor,    sensorSONAR_cm)
+#pragma config(Sensor, I2C_1,  rightIME,       sensorQuadEncoderOnI2CPort,    , AutoAssign)
+#pragma config(Sensor, I2C_2,  leftIME,        sensorQuadEncoderOnI2CPort,    , AutoAssign)
+#pragma config(Sensor, I2C_3,  armIME,         sensorQuadEncoderOnI2CPort,    , AutoAssign)
+#pragma config(Motor,  port1,           leftMotor,     tmotorVex393_HBridge, PIDControl, reversed, driveLeft, encoderPort, I2C_2)
+#pragma config(Motor,  port10,          rightMotor,    tmotorVex393_HBridge, PIDControl, driveRight, encoderPort, I2C_1)
 
 const float NORMAL_SPEED=63;
 const float SLOW_SPEED=40;
