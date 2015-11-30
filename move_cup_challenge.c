@@ -141,4 +141,9 @@ task main()
 	forward(3*12/WHEEL_CIRCUM);
 	doNothing(1000);
 	turnRight(0.8);
+	doNothing(1000);
+	moveArmUp(300);
+	doNothing(1000);
+	forward(6/WHEEL_CIRCUM);
+	openClaw();
 }
