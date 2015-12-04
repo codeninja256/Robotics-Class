@@ -97,27 +97,29 @@ void turnRight(float rotations)
 
 void closeClaw()
 {
-		motor[clawMotor] = -20;
+	motor[clawMotor] = -20;
    	wait1Msec(1400);
-   	doNothing(0);
+   	motor[clawMotor] = 0;
 }
 void openClaw()
 {
-	  motor[clawMotor]=20;
+	  motor[clawMotor] = 20;
 	  wait1Msec(1400);
-	  doNothing(0);
+	  motor[clawMotor] = 0;
 }
 
 void moveArmUp(float time)
 {
-	motor[armMotor]=40;
+	motor[armMotor] = 40;
 	wait1Msec(time);
+	motor[armMotor] = 0;
 }
 
 void moveArmDown(float time)
 {
-		motor[armMotor]=-40;
-		wait1Msec(time);
+	motor[armMotor] = -40;
+	wait1Msec(time);
+	motor[armMotor] = 0;
 }
 
 task main()
