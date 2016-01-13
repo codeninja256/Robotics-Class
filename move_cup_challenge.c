@@ -132,6 +132,7 @@ void closeClaw()
 	wait1Msec(1400);
 	motor[clawMotor] = 0;
 }
+
 void openClaw()
 {
 	motor[clawMotor] = 40;
