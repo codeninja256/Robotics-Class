@@ -29,6 +29,7 @@ const float SLOW_SPEED = 40;
 const float ROTATIONS_TO_TICKS = 627.2;
 const int WHEEL_DIAMETER = 4;
 const float WHEEL_CIRCUM = WHEEL_DIAMETER * PI;
+const int AXLE_LENGTH = 10;
 
 void resetEncoders();
 void doNothing(int ms);
@@ -110,6 +111,7 @@ void turnLeft(float deg)
 {
 #ifdef USE_ENCODERS
 	resetEncoders();
+	float rotations = (PI * AXLE_LENGTH * deg / 360) / (WHEEL_DIAMTER * PI);
 	while(abs(getMotorEncoder(leftMotor)) < rotations * ROTATIONS_TO_TICKS)
 	{
 		motor[leftMotor] = -NORMAL_SPEED;
@@ -131,6 +133,7 @@ void turnRight(float deg)
 {
 #ifdef USE_ENCODERS
 	resetEncoders();
+	float rotations = (PI * AXLE_LENGTH * deg / 360) / (WHEEL_DIAMTER * PI);
 	while(abs(getMotorEncoder(rightMotor)) < rotations * ROTATIONS_TO_TICKS)
 	{
 		motor[leftMotor] = NORMAL_SPEED;
