@@ -21,15 +21,15 @@
 
 //Base code for moving forward and turning
 
-//--UNCCOMMENT THE FOLLOWING LINE TO USE ENCODERS FOR TURNING--
-//#define USE_ENCODERS 
+//--COMMENT OUT THE FOLLOWING LINE TO USE GYRO FOR TURNING--
+#define USE_ENCODERS 
 
 const float NORMAL_SPEED = 63;
 const float SLOW_SPEED = 40;
 const float ROTATIONS_TO_TICKS = 627.2;
 const int WHEEL_DIAMETER = 4;
 const float WHEEL_CIRCUM = WHEEL_DIAMETER * PI;
-const int AXLE_LENGTH = 10;
+const int AXLE_LENGTH = 12;
 
 void resetEncoders();
 void doNothing(int ms);
