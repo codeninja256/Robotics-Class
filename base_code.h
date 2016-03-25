@@ -122,7 +122,6 @@ void turnLeft(float deg)
 	{
 		motor[leftMotor] = -NORMAL_SPEED;
 		motor[rightMotor] = NORMAL_SPEED;
-		writeDebugStream("%d", SensorValue[gyro]);
 	}
 #endif
 	motor[leftMotor] = 0;
