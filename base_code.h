@@ -118,6 +118,7 @@ void turnLeft(float deg)
 		motor[rightMotor] = NORMAL_SPEED;
 	}
 #else
+	wait1Msec(1000);
 	while(SensorValue(gyro) > -deg * 10)
 	{
 		motor[leftMotor] = -NORMAL_SPEED;
@@ -139,6 +140,7 @@ void turnRight(float deg)
 		motor[rightMotor] = -NORMAL_SPEED;
 	}
 #else
+	wait1Msec(1000);
 	while(SensorValue[gyro] < deg * 10)
 	{
 		motor[leftMotor] = NORMAL_SPEED;
