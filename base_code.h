@@ -41,6 +41,7 @@ void closeClaw();
 void openClaw();
 void moveArmUp(float time);
 void moveArmDown(float time);
+void joystickMove();
 
 void resetEncoders()
 {
