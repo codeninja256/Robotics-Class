@@ -179,4 +179,30 @@ void moveArmDown(float time)
 	motor[armMotor] = 0;
 }
 
+void joystickMove()
+{
+	motor[leftMotor] = vexRT[Ch3];
+  motor[rightMotor] = vexRT[Ch2];
+  while(vexRt[Btn6U])
+  {
+    motor[armMotor] = 30;
+  }
+  motor[armMotor] = 0;
+  while(vexRt[Btn6D])
+  {
+  	motor[armMotor] = -30;
+  }
+  motor[armMotor] = 0;
+  while(vexRT[Btn5U])
+  {
+  	motor[clawMotor] = 30;
+  }
+  motor[clawMotor] = 0;
+  while(vexRT[Btn5D])
+  {
+  	motor[clawMotor] = -30;
+  }
+  motor[clawMotor] = 0;
+}
+
 #endif
